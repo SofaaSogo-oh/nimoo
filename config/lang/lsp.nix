@@ -1,13 +1,13 @@
 {
     plugins = {
+        lsp-lines.enable = true;
+        lsp-format.enable = true;
         lsp = {
             enable = true;
             inlayHints = true;
             servers = {
                 texlab.enable = true;
             };
-            lsp-lines.enable = true;
-            lsp-format.enable = true;
             keymaps = {
                 lspBuf = {
                     gd = "definition";
