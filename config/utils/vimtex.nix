@@ -3,7 +3,7 @@
         enable = true;
         texlivePackage = null;
         settings = {
-                compiler_method = "xelatex";
+                # compiler_method = "xelatex";
                 view_method = "zathura";
         };
     };
