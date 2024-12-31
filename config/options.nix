@@ -32,6 +32,9 @@
 
   };
 
-  globals.mapleader = " ";
+  globals = {
+    mapleader = " ";
+    nvlime_config.cmp.enabled = true;
+  };
   colorscheme = "vim";
 }

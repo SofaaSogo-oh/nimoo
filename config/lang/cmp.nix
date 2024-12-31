@@ -1,6 +1,7 @@
 {
   plugins = {
     cmp-emoji.enable = true;
+    cmp-latex-symbols.enable = true;
     cmp = {
       enable = true;
       settings = {
@@ -30,6 +31,7 @@
           { name = "git"; }
           { name = "nvim_lsp"; }
           { name = "emoji"; }
+          { name = "latex_symbols"; }
           {
             name = "buffer"; # text within current buffer
             option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
@@ -43,7 +45,7 @@
         ];
 
         mapping = {
-          "<C-Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+          "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
           "<C-j>" = "cmp.mapping.select_next_item()";
           "<C-k>" = "cmp.mapping.select_prev_item()";
 

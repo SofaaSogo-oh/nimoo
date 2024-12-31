@@ -9,6 +9,7 @@
         texlab.enable = true;
         nixd.enable = true;
         clangd.enable = true;
+        cmake.enable = true;
         html.enable = true;
         cssls.enable = true;
         ts_ls.enable = true;

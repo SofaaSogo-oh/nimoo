@@ -7,5 +7,6 @@
     ./telescope.nix
     ./indent-blankline.nix
     ./noice.nix
+    ./startup.nix
   ];
 }

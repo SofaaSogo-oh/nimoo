@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./parsley.nix
+    ./parinfer.nix
   ];
 
   extraPlugins = [(pkgs.vimUtils.buildVimPlugin {
