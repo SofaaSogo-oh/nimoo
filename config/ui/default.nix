@@ -1,5 +1,11 @@
 {
-  plugins.web-devicons.enable = true;
+  plugins = {
+    web-devicons.enable = true;
+    lualine = {
+      enable = true;
+      settings.options.globalstatus = true;
+    };
+  };
   imports = [
     ./nvim-tree.nix
     ./barbar.nix
