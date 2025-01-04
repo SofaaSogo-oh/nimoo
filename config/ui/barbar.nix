@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{
   plugins.barbar.enable = true;
   keymaps = [
     {
@@ -30,6 +30,16 @@
       mode = "n";
       key = "<A-p>";
       action = "<cmd>BufferPin<CR>";
+    }
+    {
+      mode = "n";
+      key = "<A-0>";
+      action = "<cmd>BufferGoto 0<CR>";
+    }
+    {
+      mode = "n";
+      key = "<A-w>";
+      action = "<cmd>BufferCloseAllButCurrentOrPinned<cr>";
     }
   ];
 }
