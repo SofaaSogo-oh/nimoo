@@ -1,4 +1,5 @@
 {
+  colorschemes.cyberdream.enable=true;
   plugins = {
     web-devicons.enable = true;
     lualine = {
