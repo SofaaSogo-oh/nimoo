@@ -1,5 +1,12 @@
 {
-  colorschemes.cyberdream.enable=true;
+  colorschemes.cyberdream = {
+    enable = true;
+    settings = {
+      variant = "light";
+      transparent = false;
+    };
+  };
+
   plugins = {
     web-devicons.enable = true;
     lualine = {
