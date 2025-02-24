@@ -2,8 +2,7 @@
   colorschemes.cyberdream = {
     enable = true;
     settings = {
-      variant = "light";
-      transparent = false;
+      transparent = true;
     };
   };
 
