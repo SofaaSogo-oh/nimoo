@@ -14,6 +14,7 @@
         cssls.enable = true;
         ts_ls.enable = true;
         ghcide.enable = true;
+        hls.enable = true;
       };
 
       keymaps = {
@@ -26,6 +27,7 @@
           K = "hover";
           "<leader>cw" = "workspace_symbol";
           "<leader>cr" = "rename";
+          qf = "code_action";
         };
         diagnostic = {
           "<leader>cd" = "open_float";
