@@ -14,7 +14,11 @@
         cssls.enable = true;
         ts_ls.enable = true;
         ghcide.enable = true;
-        hls.enable = true;
+        # hls.enable = true;
+        hls = {
+          enable = true;
+          installGhc = true;
+        };
       };
 
       keymaps = {
