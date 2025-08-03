@@ -26,5 +26,7 @@ with keymapLib; {
           require('haskell-tools').repl.toggle(vim.api.nvim_buf_get_name(0))
         end
       '')
+    ] ++ [
+      (Key "n" "<leader>a" "<Plug>HaskellHoverAction")
     ];
 }
