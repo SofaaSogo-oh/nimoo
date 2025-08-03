@@ -33,6 +33,7 @@
         module = import ./config;
         extraSpecialArgs = {
           # inherit (inputs) nixpkgs-unstable;
+          keymapsLib = import ./lib/keys.nix { inherit (pkgs) lib; };
         };
       };
       nvim = nixvim'.makeNixvimWithModule nixvimModule;
