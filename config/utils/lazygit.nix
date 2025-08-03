@@ -1,10 +1,6 @@
-{
+{keymapLib, ...}: with keymapLib; {
   plugins.lazygit.enable = true;
-  keymaps = [
-    {
-      mode = "n";
-      key = "<leader>gl";
-      action = "<cmd>LazyGit<cr>";
-    }
+  keymaps = map cmdKey [
+    (Key "n" "<leader>gl" "LazyGit")
   ];
 }

@@ -1,5 +1,5 @@
-{pkgs, keymapsLib, ...}: 
-with keymapsLib; {
+{pkgs, keymapLib, ...}: 
+with keymapLib; {
   imports = [];
 
   extraPlugins = [(pkgs.vimUtils.buildVimPlugin {
@@ -46,8 +46,7 @@ with keymapsLib; {
     '';
   })];
 
-  keymaps =
-    map luaKey [
+  keymaps = map luaKey [
       (Key "n" "<leader>lc" "vim.lsp.codelens.run")
       (Key "n" "<leader>hs" "require('haskell-tools').hoogle.hoogle_signature")
       (Key "n" "<leader>ea" "require('haskell-tools').lsp.buf_eval_all")

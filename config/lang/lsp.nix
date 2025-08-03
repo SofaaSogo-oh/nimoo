@@ -1,4 +1,4 @@
-{
+{keymapLib, ...}: with keymapLib; {
   plugins = {
     lsp-lines.enable = true;
     lsp-format.enable = true;
@@ -41,21 +41,9 @@
       };
     };
   };
-  keymaps = [
-    {
-      mode = "n";
-      key = "<leader>li";
-      action = "<cmd>LspInfo<cr>";
-    }
-    {
-      mode = "n";
-      key = "<leader>ll";
-      action = "<cmd>LspLog<cr>";
-    }
-    {
-      mode = "n";
-      key = "<leader>lr";
-      action = "<cmd>LspRestart<cr>";
-    }
+  keymaps = map cmdKey [
+    (Key "n" "<leader>li" "LspInfo")
+    (Key "n" "<leader>ll" "LspLog")
+    (Key "n" "<leader>lr" "LspRestart")
   ];
 }

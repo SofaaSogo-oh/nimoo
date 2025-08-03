@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{keymapLib, ...}: 
+with keymapLib; {
   plugins = {
     nvim-tree = {
       enable = true;
@@ -9,18 +10,8 @@
     };
   };
 
-  keymaps = [
-    {
-      mode = "n";
-      key = "<leader>ft";
-      action = "<cmd>NvimTreeToggle<CR>";
-      options.desc = "Tree Toggle";
-    }
-    {
-      mode = "n";
-      key = "<leader>ff";
-      action = "<cmd>NvimTreeFocus<CR>";
-      options.desc = "Tree focus";
-    }
+  keymaps = map cmdKey [
+    ((Key "n" "<leader>ft" "NvimTreeToggle") // (KeyDesc "Tree Toggle"))
+    ((Key "n" "<leader>ff" "NvimTreeFocus") // (KeyDesc "Tree Focus"))
   ];
 }

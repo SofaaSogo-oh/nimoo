@@ -1,45 +1,14 @@
-{
+{ keymapLib, ... }:
+with keymapLib; {
   plugins.barbar.enable = true;
-  keymaps = [
-    {
-      mode = "n";
-      key = "<A-,>";
-      action = "<cmd>BufferPrevious<CR>";
-    }
-    {
-      mode = "n";
-      key = "<A-.>";
-      action = "<cmd>BufferNext<CR>";
-    }
-    {
-      mode = "n";
-      key = "<A-<>";
-      action = "<cmd>BufferMovePrevious<CR>";
-    }
-    {
-      mode = "n";
-      key = "<A->>";
-      action = "<cmd>BufferMoveNext<CR>";
-    }
-    {
-      mode = "n";
-      key = "<A-c>";
-      action = "<cmd>BufferClose<CR>";
-    }
-    {
-      mode = "n";
-      key = "<A-p>";
-      action = "<cmd>BufferPin<CR>";
-    }
-    {
-      mode = "n";
-      key = "<A-0>";
-      action = "<cmd>BufferGoto 0<CR>";
-    }
-    {
-      mode = "n";
-      key = "<A-w>";
-      action = "<cmd>BufferCloseAllButCurrentOrPinned<cr>";
-    }
+  keymaps = map cmdKey [
+    (Key "n" "<A-,>" "BufferPrevious")
+    (Key "n" "<A-.>" "BufferNext")
+    (Key "n" "<A-<>" "BufferMovePrevious")
+    (Key "n" "<A->>" "BufferMoveNext")
+    (Key "n" "<A-c>" "BufferClose")
+    (Key "n" "<A-p>" "BufferPin")
+    (Key "n" "<A-0>" "BufferGoto 0")
+    (Key "n" "<A-w>" "BufferCloseAllButCurrentOrPinned")
   ];
 }

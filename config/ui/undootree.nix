@@ -1,4 +1,4 @@
-{
+{keymapLib, ...}: with keymapLib; {
   plugins.undotree = {
     enable = true;
     settings = {
@@ -6,15 +6,7 @@
       focusOnToggle = true;
     };
   };
-  keymaps = [
-    {
-      mode = "n";
-      key = "<leader>ut";
-      action = "<cmd>UndotreeToggle<CR>";
-      options = {
-        silent = true;
-        desc = "Undotree";
-      };
-    }
+  keymaps = map cmdKey [
+    ((Key "n" "<leader>ut" "UndotreeToggle") // SilentKey // (KeyDesc "Undotree"))
   ];
 }

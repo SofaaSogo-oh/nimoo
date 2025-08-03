@@ -1,4 +1,4 @@
-{
+{keymapLib, ...}: with keymapLib; {
   plugins.telescope = {
     enable = true;
     extensions = {
@@ -166,31 +166,10 @@
       };
     };
   };
-  keymaps = [
-    {
-      mode = "n";
-      key = "<leader>sd";
-      action = "<cmd>Telescope diagnostics bufnr=0<cr>";
-      options = {
-        desc = "Document diagnostics";
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>fe";
-      action = "<cmd>Telescope file_browser<cr>";
-      options = {
-        desc = "File browser";
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>fE";
-      action = "<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>";
-      options = {
-        desc = "File browser";
-      };
-    }
+  keymaps = map cmdKey [
+    ((Key "n" "<leader>sd" "Telescope diagnostics bufnr=0") // (KeyDesc "Document diagnostics"))
+    ((Key "n" "<leader>fe" "Telescope file_browser") // (KeyDesc "File browser"))
+    ((Key "n" "<leader>fE" "Telescope file_browser path=%:p:h select_buffer=true") // (KeyDesc "File browser"))
   ];
   extraConfigLua = ''
     require("telescope").setup{
