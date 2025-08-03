@@ -12,7 +12,11 @@
     buildInputs = with pkgs.haskellPackages; [
       fast-tags
       haskell-debug-adapter
+      cabal-install
       hoogle
+    ];
+    nvimSkipModules = [
+      "haskell-tools.hoogle.helpers"
     ];
     extraConfigLua = ''
       local ht = require('haskell-tools')

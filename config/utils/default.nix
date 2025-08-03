@@ -2,7 +2,7 @@
   imports = [
     ./vimtex.nix
     ./lazygit.nix
-    ./nvlime
+    # ./nvlime
     ./ht.nix
   ];
 }
