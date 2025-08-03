@@ -8,10 +8,10 @@
           "vim.lsp.util.stylize_markdown" = true;
           "cmp.entry.get_documentation" = true;
         };
-        hover.enabled = false;
-        message.enabled = false;
-        signature.enabled = false;
-        progress.enabled = false;
+        hover.enabled = true;
+        message.enabled = true;
+        signature.enabled = true;
+        progress.enabled = true;
       };
     };
   };
