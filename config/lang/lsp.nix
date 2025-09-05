@@ -13,7 +13,7 @@
         html.enable = true;
         cssls.enable = true;
         ts_ls.enable = true;
-        ghcide.enable = true;
+        # ghcide.enable = true;
       };
 
       keymaps = {
